@@ -11,7 +11,7 @@ export function NavBar(): JSX.Element {
       <div className='container nav-bar--container'>
         <a className='navbar-brand nav-bar--logo' href='#'>
           <img
-            className='navbar--logo-img'
+            className='nav-bar--logo-img'
             src={logo}
             alt='logo'
             width='204'
