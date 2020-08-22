@@ -19,7 +19,7 @@ const BOOTSTRAP_CHECKSUM =
   'sha384-AQznhoDGj2aKQxm9Hz1U8fvaEgnQDyn0LhRc1UdE2tJbig9H8xMsr4onwOB7RkPu';
 
 const MONTSERRAT =
-  'family=Montserrat:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900';
+  'family=Montserrat:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700;1,900';
 
 const ROBOTO = 'family=Roboto:ital,wght@0,300;0,400;1,300;1,400';
 
