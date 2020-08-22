@@ -1,0 +1,188 @@
+$font-weights: (
+  'light': 300,
+  'regular': 400,
+  'bold': 700,
+  'black': 900,
+);
+
+@mixin get-font-weight($val: 'regular') {
+  font-weight: map-get($font-weights, $val);
+}
+
+@mixin montserrat($val) {
+  font-family: 'Montserrat', sans-serif;
+  @include get-font-weight($val);
+}
+
+@mixin montserrat-light {
+  @include montserrat('light');
+}
+
+@mixin montserrat-regular {
+  @include montserrat('regular');
+}
+
+@mixin montserrat-bold {
+  @include montserrat('bold');
+}
+
+@mixin montserrat-black {
+  @include montserrat('black');
+}
+
+@mixin roboto($val) {
+  font-family: 'Roboto', sans-serif;
+  @include get-font-weight($val);
+}
+
+@mixin roboto-light {
+  @include roboto('light');
+}
+
+@mixin roboto-regular {
+  @include roboto('regular');
+}
+
+@mixin headline-1 {
+  @include montserrat-black();
+
+  font-size: 4.5rem;
+  line-height: 4.5rem;
+}
+
+@mixin headline-2 {
+  @include montserrat-bold();
+
+  font-size: 3.75rem;
+  line-height: 3.75rem;
+}
+
+@mixin headline-3 {
+  @include montserrat-bold();
+
+  font-size: 3rem;
+  line-height: 3rem;
+}
+
+@mixin headline-4 {
+  @include montserrat-light();
+
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+@mixin headline-5 {
+  @include montserrat-bold();
+
+  font-size: 1.875rem;
+  line-height: 2rem;
+}
+
+@mixin headline-6 {
+  @include montserrat-regular();
+
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+}
+
+@mixin subtitle-1 {
+  @include montserrat-regular();
+
+  font-size: 1.5rem;
+  letter-spacing: 0.25rem;
+  line-height: 1.5rem;
+}
+
+@mixin subtitle-2 {
+  @include montserrat-regular();
+
+  font-size: 1.125rem;
+  letter-spacing: 0.25rem;
+  line-height: 1.125rem;
+}
+
+@mixin body-1 {
+  @include roboto-regular();
+
+  font-size: 1.25rem;
+}
+
+@mixin body-2 {
+  @include roboto-light();
+
+  font-size: 1.125rem;
+}
+
+@mixin button {
+  @include montserrat-black();
+
+  font-size: 1rem;
+  letter-spacing: 0.2rem;
+}
+
+@mixin bold {
+  @include montserrat('bold');
+}
+
+@mixin italic {
+  font-style: italic;
+}
+
+h1,
+.h1 {
+  @include headline-1();
+}
+
+h2,
+.h2 {
+  @include headline-2();
+}
+
+h3,
+.h3 {
+  @include headline-3();
+}
+
+h4,
+.h4 {
+  @include headline-4();
+}
+
+h5,
+.h5 {
+  @include headline-5();
+}
+
+h6,
+.h6 {
+  @include headline-6();
+}
+
+.body-1 {
+  @include body-1();
+}
+
+.body-2 {
+  @include body-2();
+}
+
+.subtitle-1 {
+  @include subtitle-1();
+}
+
+.subtitle-2 {
+  @include subtitle-2();
+}
+
+button,
+.button {
+  @include button();
+}
+
+.text-bold {
+  @include bold();
+}
+
+.text-italic {
+  @include italic();
+}

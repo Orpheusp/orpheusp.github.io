@@ -1,0 +1,24 @@
+@import '../../scss/color.scss';
+
+.nav-bar {
+  background-color: $matte;
+  height: 6.25rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.nav-bar--container {
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+}
+
+.nav-bar--logo {
+  display: inline-block;
+  height: 2.25rem;
+}
+
+.nav-bar--logo-img {
+  height: 100%;
+  width: auto;
+}
