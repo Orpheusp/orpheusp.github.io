@@ -1,4 +1,7 @@
+@import '../scss/color.scss';
+
 body {
+  background-color: $matte;
   font-size: 16px;
   margin: 0;
 }
