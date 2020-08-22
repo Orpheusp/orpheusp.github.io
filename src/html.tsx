@@ -1,6 +1,7 @@
 import { graphql } from 'gatsby';
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
+import { JsxEmit } from 'typescript';
 
 interface Props {
   htmlAttributes: PropTypes.Requireable<Record<string, unknown>>;
@@ -30,6 +31,32 @@ const FONTS_URL = `https://fonts.googleapis.com/css2?${MONTSERRAT}&${ROBOTO}&dis
  * @param props properties and child components of the page.
  */
 export default function Html(props: Props): JSX.Element {
+  const favicon = (
+    <React.Fragment>
+      <link
+        rel='apple-touch-icon'
+        sizes='180x180'
+        href='/apple-touch-icon.png'
+      />
+      <link
+        rel='icon'
+        type='image/png'
+        sizes='32x32'
+        href='/favicon-32x32.png'
+      />
+      <link
+        rel='icon'
+        type='image/png'
+        sizes='16x16'
+        href='/favicon-16x16.png'
+      />
+      <link rel='manifest' href='/site.webmanifest' />
+      <link rel='mask-icon' href='/safari-pinned-tab.svg' color='#2e597b' />
+      <meta name='msapplication-TileColor' content='#2e597b' />
+      <meta name='theme-color' content='#ffffff' />
+    </React.Fragment>
+  );
+
   return (
     <html {...props.htmlAttributes}>
       <head>
@@ -46,6 +73,7 @@ export default function Html(props: Props): JSX.Element {
           crossOrigin='anonymous'
         />
         <link rel='stylesheet' href={FONTS_URL} />
+        {favicon}
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>
