@@ -1,0 +1,35 @@
+@import '../../scss/color.scss';
+
+.intro-pane {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  width: 100vw;
+}
+
+.intro-pane--text {
+  bottom: 0;
+  color: $blue;
+  margin-bottom: 1.875rem;
+  position: absolute;
+
+  .subtitle-1 {
+    padding-top: 1.75rem;
+    padding-bottom: 1.75rem;
+  }
+
+  h1 {
+    margin-bottom: 3.5rem;
+  }
+
+  h4 {
+    margin-bottom: 4.75rem;
+  }
+}
+
+.intro-pane--profile-picture {
+  position: absolute;
+  top: 6.25rem;
+  right: -2rem;
+  z-index: -1;
+}
