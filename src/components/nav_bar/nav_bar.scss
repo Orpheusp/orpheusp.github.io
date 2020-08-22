@@ -3,10 +3,14 @@
 .nav-bar {
   background-color: $matte;
   height: 6.25rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 .nav-bar--container {
-  padding: 2rem 0;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
 }
 
 .nav-bar--logo {
