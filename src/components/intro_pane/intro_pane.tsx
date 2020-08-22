@@ -1,5 +1,6 @@
 import * as React from 'react';
 
+import { PaneLabel } from '../pane_label/pane_label';
 import { ProfilePicture } from '../profile_picture/profile_picture';
 
 import './intro_pane.scss';
@@ -11,7 +12,7 @@ export function IntroPane(): JSX.Element {
       <ProfilePicture className='intro-pane--profile-picture' />
       <div className='container'>
         <div className='intro-pane--text'>
-          <div className='subtitle-1 col-2'>INTRO</div>
+          <PaneLabel text={'intro'} />
           <h1 className='col-6'>
             <span className='text-italic'>Hey there! I&apos;m Orpheus.</span>
           </h1>
