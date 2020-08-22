@@ -9,7 +9,7 @@
     "jsx": "react",
     "lib": ["es6", "ES2015", "DOM"],
     "module": "commonjs",
-    "moduleResolution": "classic",
+    "moduleResolution": "node",
     "noImplicitAny": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
@@ -21,5 +21,5 @@
     "target": "es5"
   },
   "exclude": ["node_modules"],
-  "include": ["src/index.d.ts", "src/**/*"]
+  "include": ["src/declaration.d.ts", "src/**/*.tsx", "src/**/*.ts"]
 }

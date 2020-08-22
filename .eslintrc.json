@@ -42,6 +42,7 @@
         "jsdoc/require-returns-type": 0,
         "jsdoc/require-param-type": 0,
         "jsdoc/param-type": 0,
+        "jsdoc/require-param": 0,
         "@typescript-eslint/no-empty-function": "off",
         "@typescript-eslint/no-non-null-assertion": "off"
       }
