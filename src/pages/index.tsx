@@ -9,7 +9,6 @@ export default function Home(): JSX.Element {
   return (
     <React.Fragment>
       <NavBar />
-      <h1>Hello World!</h1>
     </React.Fragment>
   );
 }
