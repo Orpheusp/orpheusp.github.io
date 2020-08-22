@@ -1,0 +1,18 @@
+// We need the exact measurements of the width and the height of the clip path
+// to "frame" the profile picture.
+$clip-path-width: 740px;
+$clip-path-height: 555px;
+
+.profile-picture-clip--img-container {
+  clip-path: url(#profile-picture-clip);
+  height: $clip-path-height;
+  position: relative;
+  width: $clip-path-width;
+}
+
+.profile-picture-clip--img {
+  bottom: 0;
+  height: 100%;
+  position: absolute;
+  right: 0;
+}
