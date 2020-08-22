@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+import logo from '../../img/logo.svg';
+
 import './nav_bar.scss';
 
 /** Component for the NavBar. */
@@ -10,7 +12,7 @@ export function NavBar(): JSX.Element {
         <a className='navbar-brand nav-bar--logo' href='#'>
           <img
             className='navbar--logo-img'
-            src='/img/logo.svg'
+            src={logo}
             alt='logo'
             width='204'
             height='36'
