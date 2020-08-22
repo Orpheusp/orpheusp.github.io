@@ -7,5 +7,5 @@ module.exports = {
       'This is a personal website of Orpheus Peng, generated with Gatsby, ' +
       'and hosted with GitHub Pages',
   },
-  plugins: [],
+  plugins: ['gatsby-plugin-sass'],
 };
