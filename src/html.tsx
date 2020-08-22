@@ -17,6 +17,13 @@ const BOOTSTRAP_URL =
 const BOOTSTRAP_CHECKSUM =
   'sha384-AQznhoDGj2aKQxm9Hz1U8fvaEgnQDyn0LhRc1UdE2tJbig9H8xMsr4onwOB7RkPu';
 
+const MONTSERRAT =
+  'family=Montserrat:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900';
+
+const ROBOTO = 'family=Roboto:ital,wght@0,300;0,400;1,300;1,400';
+
+const FONTS_URL = `https://fonts.googleapis.com/css2?${MONTSERRAT}&${ROBOTO}&display=swap`;
+
 /**
  * Renders the entire site.
  *
@@ -38,6 +45,7 @@ export default function Html(props: Props): JSX.Element {
           integrity={BOOTSTRAP_CHECKSUM}
           crossOrigin='anonymous'
         />
+        <link rel='stylesheet' href={FONTS_URL} />
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>

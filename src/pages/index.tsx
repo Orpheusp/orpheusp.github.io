@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+import './index.scss';
+
 import { NavBar } from '../components/nav_bar/nav_bar';
 
 /** Root component that renders the entire site. */
