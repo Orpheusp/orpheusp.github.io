@@ -1,0 +1,30 @@
+@import '../../scss/color.scss';
+
+.experiences-pane {
+  color: $blue;
+  position: relative;
+  margin-bottom: 6.25rem;
+}
+
+.experiences-pane--content {
+  background-color: #fff;
+  border: $light-orange 1px solid;
+  border-radius: 1rem;
+  padding: 0 2rem;
+
+  &:hover {
+    box-shadow: 0 0.25rem 1.25rem $light-orange;
+  }
+}
+
+.experiences-pane--job-row {
+  margin-bottom: 3.5rem;
+
+  h6 {
+    margin-bottom: 1rem;
+  }
+
+  .body-1 {
+    margin-bottom: 1rem;
+  }
+}
