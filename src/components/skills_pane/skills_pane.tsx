@@ -1,13 +1,9 @@
 import * as React from 'react';
 
 import { PaneLabel } from '../pane_label/pane_label';
+import { Skill, SkillItem } from '../skill_item/skill_item';
 
 import './skills_pane.scss';
-
-interface Skill {
-  thumbnailUrl: string;
-  label: string;
-}
 
 interface Skillset {
   name: string;
@@ -75,20 +71,6 @@ const skillsets: Skillset[] = [
     ],
   },
 ];
-
-interface SkillItemProps {
-  skill: Skill;
-}
-
-/** Returns a skill item */
-export function SkillItem({ skill }: SkillItemProps): JSX.Element {
-  return (
-    <div className='skill-item'>
-      <img className='skill-item--thumbnail' src={skill.thumbnailUrl} />
-      <div className='skill-item--label subtitle-2'>{skill.label}</div>
-    </div>
-  );
-}
 
 /** Returns an skillset list */
 function getSkillsetItem(skillset: Skillset): JSX.Element {
