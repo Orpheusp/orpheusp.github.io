@@ -8,25 +8,21 @@ const connectHandles = [
   {
     link: 'https://github.com/orpheusp',
     thumbnailUrl: require('../../img/github_logo.png'),
-    thumbnailHighlightUrl: require('../../img/github_logo_highlight.png'),
     label: 'orpheusp',
   },
   {
     link: 'https://www.linkedin.com/in/weipeng29',
     thumbnailUrl: require('../../img/linkedin_logo.png'),
-    thumbnailHighlightUrl: require('../../img/linkedin_logo_highlight.png'),
     label: 'weipeng29',
   },
   {
     link: 'mailto:peng.orpheus@gmail.com',
     thumbnailUrl: require('../../img/email_logo.png'),
-    thumbnailHighlightUrl: require('../../img/email_logo_highlight.png'),
     label: 'peng.orpheus@gmail.com',
   },
   {
     link: '/orpheus_peng_resume.pdf',
     thumbnailUrl: require('../../img/resume_logo.png'),
-    thumbnailHighlightUrl: require('../../img/resume_logo_highlight.png'),
     label: 'resume',
   },
 ];
@@ -49,7 +45,6 @@ export function ConnectHandlesGroup({
         link={handle.link}
         thumbnailUrl={handle.thumbnailUrl}
         label={handle.label}
-        thumbnailHighlightUrl={handle.thumbnailHighlightUrl}
         shouldShowLabel={!inline}
         key={index}
       />
