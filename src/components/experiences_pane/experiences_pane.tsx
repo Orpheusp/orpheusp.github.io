@@ -97,15 +97,21 @@ function getJobOverview(position: string, company: string, period: string) {
   );
 }
 
+interface JobItemProps {
+  job: Job;
+}
+
 /** Returns a row of an experience. */
-function getJob(job: Job) {
+function JobItem({ job }: JobItemProps): JSX.Element {
   return (
-    <div className='row experiences-pane--job-row'>
-      <div className='col-4'>
-        {getJobOverview(job.position, job.company, job.period)}
+    <div className='experiences-pane--job-row'>
+      <div className='row'>
+        <div className='col-4'>
+          {getJobOverview(job.position, job.company, job.period)}
+        </div>
+        <div className='col-1' />
+        <div className='col-7'>{job.details}</div>
       </div>
-      <div className='col-1' />
-      <div className='col-7'>{job.details}</div>
     </div>
   );
 }
@@ -115,7 +121,9 @@ export function ExperiencesPane(): JSX.Element {
   const experiencesGroup: JSX.Element[] = [];
 
   experiences.forEach((experience, index) => {
-    experiencesGroup.push(getJob(experience));
+    experiencesGroup.push(
+      <JobItem job={experience} key={experience.position} />
+    );
   });
 
   return (

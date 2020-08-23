@@ -72,20 +72,24 @@ const skillsets: Skillset[] = [
   },
 ];
 
+interface SkillsetItemProps {
+  skillset: Skillset;
+}
+
 /** Returns an skillset list */
-function getSkillsetItem(skillset: Skillset): JSX.Element {
+function SkillsetItem({ skillset }: SkillsetItemProps): JSX.Element {
   const skills: JSX.Element[] = [];
 
   skillset.skills.forEach((skill) => {
     skills.push(
-      <div className='col-3'>
-        <SkillItem skill={skill} key={`${skillset.name} ${skill.label}`} />
+      <div className='col-3' key={`${skillset.name} ${skill.label}`}>
+        <SkillItem skill={skill} />
       </div>
     );
   });
 
   return (
-    <React.Fragment>
+    <div className='skills-pane--skillset-item'>
       <div className='row'>
         <div className='col-12'>
           <div className='subtitle-2 skills-pane--skillset-name'>
@@ -94,7 +98,7 @@ function getSkillsetItem(skillset: Skillset): JSX.Element {
         </div>
       </div>
       <div className='row'>{skills}</div>
-    </React.Fragment>
+    </div>
   );
 }
 
@@ -103,7 +107,9 @@ export function SkillsPane(): JSX.Element {
   const skillsetsGroup: JSX.Element[] = [];
 
   skillsets.forEach((skillset) => {
-    skillsetsGroup.push(getSkillsetItem(skillset));
+    skillsetsGroup.push(
+      <SkillsetItem skillset={skillset} key={skillset.name} />
+    );
   });
 
   return (
