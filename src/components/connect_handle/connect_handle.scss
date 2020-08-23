@@ -1,0 +1,72 @@
+@import '../../scss/color.scss';
+
+.connect-handle {
+  display: inline-block;
+  height: 3.125rem;
+  margin-right: 0.625rem;
+  position: relative;
+  text-decoration: none;
+
+  .connect-handle--thumbnail {
+    display: inline-block;
+  }
+
+  .connect-handle--thumbnail-highlight {
+    display: none;
+  }
+
+  &:hover {
+    width: auto;
+
+    .connect-handle--thumbnail {
+      display: none;
+    }
+
+    .connect-handle--thumbnail-highlight {
+      display: inline-block;
+    }
+
+    .connect-handle--label {
+      color: #fff;
+    }
+
+    .connect-handle--background {
+      visibility: visible;
+      width: 100%;
+    }
+  }
+}
+
+.connect-handle--thumbnail,
+.connect-handle--thumbnail-highlight {
+  border-radius: 1.5625rem;
+  height: 2.5rem;
+  margin: 0.3125rem;
+  vertical-align: middle;
+  width: 2.5rem;
+}
+
+.connect-handle--thumbnail-highlight {
+  background-color: $orange;
+}
+
+.connect-handle--label {
+  display: inline-block;
+  color: $orange;
+  padding: 1rem 0.625rem;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+.connect-handle--background {
+  background-color: $orange;
+  border-radius: 1.5625rem;
+  visibility: hidden;
+  height: 3.125rem;
+  left: 0;
+  top: 0;
+  position: absolute;
+  transition: width 0.1s linear;
+  width: 3.125rem;
+  z-index: -1;
+}
