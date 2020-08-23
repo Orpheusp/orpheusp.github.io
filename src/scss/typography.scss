@@ -82,7 +82,7 @@ $font-weights: (
   @include montserrat-regular();
 
   font-size: 1.5rem;
-  line-height: 1.75rem;
+  line-height: 2.25rem;
 }
 
 @mixin subtitle-1 {
@@ -102,9 +102,10 @@ $font-weights: (
 }
 
 @mixin body-1 {
-  @include roboto-regular();
+  @include roboto-light();
 
   font-size: 1.25rem;
+  line-height: 1.5rem;
 }
 
 @mixin body-2 {
@@ -180,7 +181,7 @@ button,
 }
 
 .text-bold {
-  @include bold();
+  @include get-font-weight('bold');
 }
 
 .text-italic {
