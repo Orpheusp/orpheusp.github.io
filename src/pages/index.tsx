@@ -9,6 +9,7 @@ import { IntroPane } from '../components/intro_pane/intro_pane';
 import { NavBar } from '../components/nav_bar/nav_bar';
 import { FooterPane } from '../components/footer_pane/footer_pane';
 import { SkillsPane } from '../components/skills_pane/skills_pane';
+import { EducationPane } from '../components/education_pane/education_pane';
 
 /** Root component that renders the entire site. */
 export default function Home(): JSX.Element {
@@ -22,6 +23,7 @@ export default function Home(): JSX.Element {
       <AboutPane />
       <ExperiencesPane />
       <SkillsPane />
+      <EducationPane />
       <FooterPane />
     </React.Fragment>
   );
