@@ -7,14 +7,16 @@ interface Props {
   thumbnailUrl?: string;
   thumbnailHighlightUrl?: string;
   label?: string;
+  shouldShowLabel: boolean;
 }
 
-/** A profile picture clipped. */
+/** A link to a social handle */
 export function ConnectHandle({
   link,
   thumbnailUrl,
   thumbnailHighlightUrl,
   label,
+  shouldShowLabel,
 }: Props): JSX.Element {
   return (
     <a className='connect-handle' href={link} target='_blank' rel='noreferrer'>
@@ -23,7 +25,10 @@ export function ConnectHandle({
         className='connect-handle--thumbnail-highlight'
         src={thumbnailHighlightUrl}
       />
-      <span className='connect-handle--label subtitle-2'>{label}</span>
+      {shouldShowLabel && (
+        <span className='connect-handle--label subtitle-2'>{label}</span>
+      )}
+
       <div className='connect-handle--background' />
     </a>
   );
