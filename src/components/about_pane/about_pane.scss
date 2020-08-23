@@ -6,7 +6,7 @@ $clip-path-width: 1623px;
 $clip-path-height: 1027px;
 
 .about-pane {
-  overflow: hidden;
+  overflow: visible;
   position: relative;
   margin-bottom: 6.25rem;
 }
@@ -15,6 +15,7 @@ $clip-path-height: 1027px;
   color: $blue;
   margin-top: 10rem;
   margin-bottom: 10rem;
+  position: relative;
 
   h6 {
     margin-bottom: 1.875rem;
@@ -29,4 +30,14 @@ $clip-path-height: 1027px;
   a:hover {
     color: $orange;
   }
+}
+
+.about-pane--background {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: scale(2.2) translateX(5%);
+  transform-origin: center center;
+  z-index: -2;
 }

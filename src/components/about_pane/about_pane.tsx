@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+import aboutPaneBackground from '../../img/about_pane_background.svg';
+
 import { PaneLabel } from '../pane_label/pane_label';
 
 import './about_pane.scss';
@@ -56,6 +58,7 @@ export function AboutPane(): JSX.Element {
             </h6>
           </div>
         </div>
+        <img src={aboutPaneBackground} className='about-pane--background' />
       </div>
     </div>
   );
