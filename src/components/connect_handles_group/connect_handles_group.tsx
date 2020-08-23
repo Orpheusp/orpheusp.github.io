@@ -33,13 +33,13 @@ const connectHandles = [
 
 interface Props {
   className?: string;
-  shouldShowLabel?: boolean;
+  inline?: boolean;
 }
 
 /** Returns a group of ConnectHandles */
 export function ConnectHandlesGroup({
   className,
-  shouldShowLabel = true,
+  inline = false,
 }: Props): JSX.Element {
   const handles: JSX.Element[] = [];
 
@@ -50,11 +50,11 @@ export function ConnectHandlesGroup({
         thumbnailUrl={handle.thumbnailUrl}
         label={handle.label}
         thumbnailHighlightUrl={handle.thumbnailHighlightUrl}
-        shouldShowLabel={shouldShowLabel}
+        shouldShowLabel={!inline}
         key={index}
       />
     );
   });
 
-  return <div className={`row ${className}`}>{handles}</div>;
+  return <div className={className + `${inline ? '' : ' row'}`}>{handles}</div>;
 }

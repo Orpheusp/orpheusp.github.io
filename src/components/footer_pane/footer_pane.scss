@@ -1,0 +1,17 @@
+@import '../../scss/color.scss';
+
+.footer-pane {
+  margin-bottom: 6.25rem;
+}
+
+.footer-pane--footnote {
+  color: $grey;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  text-align: right;
+  text-transform: uppercase;
+
+  a {
+    color: $grey;
+  }
+}
