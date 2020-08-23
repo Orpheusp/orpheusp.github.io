@@ -11,13 +11,14 @@ export function IntroPane(): JSX.Element {
   const text = (
     <React.Fragment>
       <PaneLabel text={'intro'} />
-      <div className='row'>
-        <h1 className='col-6'>
-          <span className='text-italic'>Hey there! I&apos;m Orpheus.</span>
-        </h1>
+      <div className='row intro-pane--greetings'>
+        <div className='col-6'>
+          <h1 className='text-italic'>Hey there!</h1>
+          <h1 className='text-italic'>I&apos;m Orpheus.</h1>
+        </div>
       </div>
-      <div className='row'>
-        <h4 className='col-8'>
+      <div className='row intro-pane--intro'>
+        <h4 className='col-7'>
           I am a Software Engineer in{' '}
           <span className='text-bold'>web development</span> based in{' '}
           <span className='text-bold'>San Francisco</span>, currently pursuing a

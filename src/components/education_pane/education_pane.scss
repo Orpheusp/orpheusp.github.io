@@ -1,0 +1,21 @@
+@import '../../scss/color.scss';
+
+.degree-item--thumbnail {
+  display: block;
+  height: 5.625rem;
+  margin-bottom: 1rem;
+  object-fit: contain;
+  object-position: 0% 50%;
+  width: 10rem;
+  opacity: 0.7;
+}
+
+.degree-item--details {
+  color: $grey;
+  margin-bottom: 1rem;
+}
+
+.education-pane {
+  color: $blue;
+  margin-bottom: 6.25rem;
+}
