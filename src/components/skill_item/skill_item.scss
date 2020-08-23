@@ -1,0 +1,29 @@
+@import '../../scss/color.scss';
+
+.skill-item {
+  background-color: #fff;
+  border: $light-orange 1px solid;
+  border-radius: 0.625rem;
+  margin-bottom: 1.875rem;
+  transition: box-shadow 0.2s linear;
+
+  &:hover {
+    box-shadow: $orange-shadow;
+  }
+}
+
+.skill-item--thumbnail {
+  display: inline-block;
+  height: 1.875rem;
+  margin: 0.9375rem;
+  object-fit: contain;
+  vertical-align: middle;
+  width: 1.875rem;
+}
+
+.skill-item--label {
+  width: calc(100% - 3.75rem);
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+}

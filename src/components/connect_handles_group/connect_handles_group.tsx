@@ -7,22 +7,22 @@ import './connect_handles_group.scss';
 const connectHandles = [
   {
     link: 'https://github.com/orpheusp',
-    thumbnailUrl: require('../../img/github_logo.png'),
+    thumbnailUrl: require('../../img/github_logo.svg'),
     label: 'orpheusp',
   },
   {
     link: 'https://www.linkedin.com/in/weipeng29',
-    thumbnailUrl: require('../../img/linkedin_logo.png'),
+    thumbnailUrl: require('../../img/linkedin_logo.svg'),
     label: 'weipeng29',
   },
   {
     link: 'mailto:peng.orpheus@gmail.com',
-    thumbnailUrl: require('../../img/email_logo.png'),
+    thumbnailUrl: require('../../img/email_logo.svg'),
     label: 'peng.orpheus@gmail.com',
   },
   {
     link: '/orpheus_peng_resume.pdf',
-    thumbnailUrl: require('../../img/resume_logo.png'),
+    thumbnailUrl: require('../../img/resume_logo.svg'),
     label: 'resume',
   },
 ];

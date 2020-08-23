@@ -1,13 +1,9 @@
 import * as React from 'react';
 
 import { PaneLabel } from '../pane_label/pane_label';
+import { Skill, SkillItem } from '../skill_item/skill_item';
 
 import './skills_pane.scss';
-
-interface Skill {
-  thumbnailUrl: string;
-  label: string;
-}
 
 interface Skillset {
   name: string;
@@ -19,23 +15,23 @@ const skillsets: Skillset[] = [
     name: 'programming languages',
     skills: [
       {
-        thumbnailUrl: require('../../img/typescript_logo.png'),
+        thumbnailUrl: require('../../img/typescript_logo.svg'),
         label: 'TypeScript',
       },
       {
-        thumbnailUrl: require('../../img/javascript_logo.png'),
+        thumbnailUrl: require('../../img/javascript_logo.svg'),
         label: 'JavaScript',
       },
       {
-        thumbnailUrl: require('../../img/html_logo.png'),
+        thumbnailUrl: require('../../img/html_logo.svg'),
         label: 'HTML',
       },
       {
-        thumbnailUrl: require('../../img/css_logo.png'),
+        thumbnailUrl: require('../../img/css_logo.svg'),
         label: 'CSS',
       },
       {
-        thumbnailUrl: require('../../img/python_logo.png'),
+        thumbnailUrl: require('../../img/python_logo.svg'),
         label: 'Python',
       },
     ],
@@ -44,19 +40,19 @@ const skillsets: Skillset[] = [
     name: 'web libraries',
     skills: [
       {
-        thumbnailUrl: require('../../img/react_logo.png'),
+        thumbnailUrl: require('../../img/react_logo.svg'),
         label: 'React',
       },
       {
-        thumbnailUrl: require('../../img/sass_logo.png'),
+        thumbnailUrl: require('../../img/sass_logo.svg'),
         label: 'Sass',
       },
       {
-        thumbnailUrl: require('../../img/storybook_logo.png'),
+        thumbnailUrl: require('../../img/storybook_logo.svg'),
         label: 'Storybook',
       },
       {
-        thumbnailUrl: require('../../img/jasmine_logo.png'),
+        thumbnailUrl: require('../../img/jasmine_logo.svg'),
         label: 'Jasmine',
       },
     ],
@@ -65,45 +61,35 @@ const skillsets: Skillset[] = [
     name: 'design tools',
     skills: [
       {
-        thumbnailUrl: require('../../img/sketch_logo.png'),
+        thumbnailUrl: require('../../img/sketch_logo.svg'),
         label: 'Sketch',
       },
       {
-        thumbnailUrl: require('../../img/figma_logo.png'),
+        thumbnailUrl: require('../../img/figma_logo.svg'),
         label: 'Figma',
       },
     ],
   },
 ];
 
-interface SkillItemProps {
-  skill: Skill;
-}
-
-/** Returns a skill item */
-export function SkillItem({ skill }: SkillItemProps): JSX.Element {
-  return (
-    <div className='skill-item'>
-      <img className='skill-item--thumbnail' src={skill.thumbnailUrl} />
-      <div className='skill-item--label subtitle-2'>{skill.label}</div>
-    </div>
-  );
+interface SkillsetItemProps {
+  skillset: Skillset;
 }
 
 /** Returns an skillset list */
-function getSkillsetItem(skillset: Skillset): JSX.Element {
+function SkillsetItem({ skillset }: SkillsetItemProps): JSX.Element {
   const skills: JSX.Element[] = [];
 
   skillset.skills.forEach((skill) => {
     skills.push(
-      <div className='col-3'>
-        <SkillItem skill={skill} key={`${skillset.name} ${skill.label}`} />
+      <div className='col-3' key={`${skillset.name} ${skill.label}`}>
+        <SkillItem skill={skill} />
       </div>
     );
   });
 
   return (
-    <React.Fragment>
+    <div className='skills-pane--skillset-item'>
       <div className='row'>
         <div className='col-12'>
           <div className='subtitle-2 skills-pane--skillset-name'>
@@ -112,7 +98,7 @@ function getSkillsetItem(skillset: Skillset): JSX.Element {
         </div>
       </div>
       <div className='row'>{skills}</div>
-    </React.Fragment>
+    </div>
   );
 }
 
@@ -121,7 +107,9 @@ export function SkillsPane(): JSX.Element {
   const skillsetsGroup: JSX.Element[] = [];
 
   skillsets.forEach((skillset) => {
-    skillsetsGroup.push(getSkillsetItem(skillset));
+    skillsetsGroup.push(
+      <SkillsetItem skillset={skillset} key={skillset.name} />
+    );
   });
 
   return (
