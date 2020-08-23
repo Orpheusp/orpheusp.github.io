@@ -1,0 +1,32 @@
+@import '../../scss/color.scss';
+
+// We need the exact measurements of the width and the height of the clip path
+// to "frame" the profile picture.
+$clip-path-width: 1623px;
+$clip-path-height: 1027px;
+
+.about-pane {
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 6.25rem;
+}
+
+.about-pane--text {
+  color: $blue;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+
+  h6 {
+    margin-bottom: 1.875rem;
+  }
+
+  a {
+    color: $blue;
+
+    transition: color 0.1s linear;
+  }
+
+  a:hover {
+    color: $orange;
+  }
+}
