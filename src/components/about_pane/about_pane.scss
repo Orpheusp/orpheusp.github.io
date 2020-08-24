@@ -1,5 +1,4 @@
 @import '../../scss/color.scss';
-@import '../../scss/typography.scss';
 
 // We need the exact measurements of the width and the height of the clip path
 // to "frame" the profile picture.
@@ -13,8 +12,6 @@ $clip-path-height: 1027px;
 }
 
 .about-pane--text {
-  @include headline-6();
-
   color: $blue;
   margin-top: 10rem;
   margin-bottom: 10rem;
@@ -36,7 +33,6 @@ $clip-path-height: 1027px;
 
   a {
     color: $blue;
-
     transition: color 0.1s linear;
   }
 
@@ -45,11 +41,9 @@ $clip-path-height: 1027px;
   }
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 991.98px) {
   .about-pane--text {
-    @include body-1();
-
-    margin-top: 5rem;
+    margin-top: 0;
     margin-bottom: 5rem;
   }
 }
