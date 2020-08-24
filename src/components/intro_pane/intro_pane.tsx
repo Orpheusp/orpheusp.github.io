@@ -2,7 +2,8 @@ import * as React from 'react';
 
 import { ConnectHandlesGroup } from '../connect_handles_group/connect_handles_group';
 import { PaneLabel } from '../pane_label/pane_label';
-import { ProfilePicture } from '../profile_picture/profile_picture';
+
+import profilePic from '../../img/profile_pic.png';
 
 import './intro_pane.scss';
 
@@ -31,7 +32,7 @@ export function IntroPane(): JSX.Element {
 
   return (
     <div className='intro-pane'>
-      <ProfilePicture className='intro-pane--profile-picture' />
+      <img src={profilePic} className='intro-pane--profile-picture' />
       <div className='container'>
         <div className='intro-pane--content'>
           {text}
