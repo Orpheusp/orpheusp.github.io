@@ -1,0 +1,26 @@
+@import '../scss/color.scss';
+
+.page-404 {
+  background-color: $matte;
+}
+
+.page-404--content {
+  height: calc(100vh - 9.375rem);
+  padding-top: 10rem;
+}
+
+.page-404--logo-container {
+  height: 3rem;
+  margin-bottom: 5rem;
+}
+
+.page-404--logo {
+  display: block;
+  height: 3rem;
+  margin: auto;
+}
+
+.page-404--text {
+  color: $blue;
+  text-align: center;
+}

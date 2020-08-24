@@ -28,15 +28,11 @@ const connectHandles = [
 ];
 
 interface Props {
-  className?: string;
   inline?: boolean;
 }
 
 /** Returns a group of ConnectHandles */
-export function ConnectHandlesGroup({
-  className,
-  inline = false,
-}: Props): JSX.Element {
+export function ConnectHandlesGroup({ inline = false }: Props): JSX.Element {
   const handles: JSX.Element[] = [];
 
   connectHandles.forEach((handle, index) => {
@@ -51,5 +47,5 @@ export function ConnectHandlesGroup({
     );
   });
 
-  return <div className={className + `${inline ? '' : ' row'}`}>{handles}</div>;
+  return <div>{handles}</div>;
 }
