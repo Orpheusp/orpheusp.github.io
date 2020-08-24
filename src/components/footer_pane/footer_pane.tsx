@@ -14,7 +14,7 @@ export function FooterPane(): JSX.Element {
             <ConnectHandlesGroup inline={true} />
           </div>
           <div className='col-12 col-md-6 col-lg-8 footer-pane--footnote'>
-            <div className='subtitle-2'>
+            <div className='body-2'>
               made in 2020. hosted at{' '}
               <a
                 href='https://github.com/Orpheusp/orpheusp.github.io'
