@@ -12,7 +12,7 @@ export default function Page404(): JSX.Element {
       <div className='container page-404--content'>
         <div className='row page-404--logo-container'>
           <div className='col-12'>
-            <a href='#'>
+            <a href='/'>
               <img src={logo} alt='logo' className='page-404--logo' />
             </a>
           </div>

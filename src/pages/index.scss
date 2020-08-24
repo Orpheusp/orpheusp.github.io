@@ -5,7 +5,8 @@ body {
   background-color: $matte;
   font-size: 16px;
   margin: 0;
-  overflow-x: hidden;
+  overflow: hidden;
+  overflow-y: scroll;
 }
 
 h1,
