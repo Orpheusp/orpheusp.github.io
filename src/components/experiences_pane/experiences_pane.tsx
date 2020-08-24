@@ -106,11 +106,13 @@ function JobItem({ job }: JobItemProps): JSX.Element {
   return (
     <div className='experiences-pane--job-row'>
       <div className='row'>
-        <div className='col-4'>
+        <div className='col-12 col-md-4 experiences-pane--job-overview'>
           {getJobOverview(job.position, job.company, job.period)}
         </div>
-        <div className='col-1' />
-        <div className='col-7'>{job.details}</div>
+        <div className='col-md-1' />
+        <div className='col-12 col-md-7 experiences-pane--job-details'>
+          {job.details}
+        </div>
       </div>
     </div>
   );
