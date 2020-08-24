@@ -37,6 +37,7 @@ const educationInfos: EducationInfo[] = [
   },
 ];
 
+/** Create an item that shows a degree information */
 function EducationInfoItem({
   educationInfo,
   className,
@@ -74,7 +75,7 @@ export function EducationPane(): JSX.Element {
       <EducationInfoItem
         educationInfo={educationInfo}
         key={educationInfo.schoolName}
-        className={'col-4'}
+        className={'col-6 col-lg-4'}
       />
     );
   });

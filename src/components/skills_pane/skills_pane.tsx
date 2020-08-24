@@ -82,7 +82,10 @@ function SkillsetItem({ skillset }: SkillsetItemProps): JSX.Element {
 
   skillset.skills.forEach((skill) => {
     skills.push(
-      <div className='col-3' key={`${skillset.name} ${skill.label}`}>
+      <div
+        className='col-12 col-sm-6 col-lg-3'
+        key={`${skillset.name} ${skill.label}`}
+      >
         <SkillItem skill={skill} />
       </div>
     );

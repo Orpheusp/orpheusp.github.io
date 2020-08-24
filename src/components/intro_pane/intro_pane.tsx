@@ -13,19 +13,25 @@ export function IntroPane(): JSX.Element {
     <React.Fragment>
       <PaneLabel text={'intro'} />
       <div className='row intro-pane--greetings'>
-        <div className='col-6'>
-          <h1 className='text-italic'>Hey there!</h1>
-          <h1 className='text-italic'>I&apos;m Orpheus.</h1>
+        <div className='col-12 col-lg-6'>
+          <div className='intro-pane--greetings-paragraph text-italic'>
+            Hey there!
+          </div>
+          <div className='intro-pane--greetings-paragraph text-italic'>
+            I&apos;m Orpheus.
+          </div>
         </div>
       </div>
       <div className='row intro-pane--intro'>
-        <h4 className='col-7'>
-          I am a Software Engineer in{' '}
-          <span className='text-bold'>web development</span> based in{' '}
-          <span className='text-bold'>San Francisco</span>, currently pursuing a
-          master&apos;s degree in{' '}
-          <span className='text-bold'>software management</span>.
-        </h4>
+        <div className='col-12 col-lg-7'>
+          <div className='intro-pane--intro-paragraph'>
+            I am a Software Engineer in{' '}
+            <span className='text-bold'>web development</span> based in{' '}
+            <span className='text-bold'>San Francisco</span>, currently pursuing
+            a master&apos;s degree in{' '}
+            <span className='text-bold'>software management</span>.
+          </div>
+        </div>
       </div>
     </React.Fragment>
   );
@@ -34,6 +40,14 @@ export function IntroPane(): JSX.Element {
     <div className='intro-pane'>
       <img src={profilePic} className='intro-pane--profile-picture' />
       <div className='container'>
+        <div className='row'>
+          <div className='col-12'>
+            <img
+              src={profilePic}
+              className='intro-pane--profile-picture-inline'
+            />
+          </div>
+        </div>
         <div className='intro-pane--content'>
           {text}
           <div className='row intro-pane--connect-handles'>

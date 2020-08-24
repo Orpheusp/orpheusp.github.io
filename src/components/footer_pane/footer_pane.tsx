@@ -10,12 +10,11 @@ export function FooterPane(): JSX.Element {
     <div className='footer-pane'>
       <div className='container'>
         <div className='row'>
-          <div className='col-4'>
+          <div className='col-12 col-md-6 col-lg-4'>
             <ConnectHandlesGroup inline={true} />
           </div>
-          <div className='col-2' />
-          <div className='col-6 footer-pane--footnote'>
-            <div className='subtitle-2'>
+          <div className='col-12 col-md-6 col-lg-8 footer-pane--footnote'>
+            <div className='body-2'>
               made in 2020. hosted at{' '}
               <a
                 href='https://github.com/Orpheusp/orpheusp.github.io'

@@ -2,6 +2,8 @@
 @import '../scss/typography.scss';
 
 body {
+  @include roboto-regular();
+
   background-color: $matte;
   font-size: 16px;
   margin: 0;

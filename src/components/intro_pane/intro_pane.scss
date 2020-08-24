@@ -1,4 +1,5 @@
 @import '../../scss/color.scss';
+@import '../../scss/typography.scss';
 
 .intro-pane {
   height: 100vh;
@@ -23,9 +24,57 @@
 }
 
 .intro-pane--profile-picture {
+  display: block;
   position: absolute;
   right: -2rem;
   top: 6.25rem;
-  width: 46.25rem;
+  width: 55%;
+  max-width: 46.25rem;
   z-index: -1;
+}
+
+.intro-pane--profile-picture-inline {
+  display: none;
+  margin-top: 6.25rem;
+  width: 55%;
+}
+
+.intro-pane--greetings-paragraph {
+  @include headline-1();
+
+  background-color: $matte;
+}
+
+.intro-pane--intro-paragraph {
+  @include headline-4();
+
+  background-color: $matte;
+}
+
+@media (max-width: 991.98px) {
+  .intro-pane {
+    height: auto;
+  }
+
+  .intro-pane--greetings-paragraph {
+    @include headline-3();
+  }
+
+  .intro-pane--intro-paragraph {
+    @include headline-6();
+  }
+
+  .intro-pane--profile-picture {
+    display: none;
+  }
+
+  .intro-pane--profile-picture-inline {
+    display: block;
+  }
+
+  .intro-pane--content {
+    bottom: inherit;
+    margin-bottom: 3rem;
+    position: relative;
+  }
 }

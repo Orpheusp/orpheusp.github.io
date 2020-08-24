@@ -1,5 +1,9 @@
 @import '../../scss/color.scss';
 
+.degree-item {
+  margin-bottom: 3rem;
+}
+
 .degree-item--thumbnail {
   display: block;
   height: 5.625rem;
@@ -12,7 +16,6 @@
 
 .degree-item--details {
   color: $grey;
-  margin-bottom: 1rem;
 }
 
 .education-pane {
