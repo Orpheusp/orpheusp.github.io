@@ -1,5 +1,4 @@
 @import '../../scss/color.scss';
-@import '../../scss/typography.scss';
 
 .intro-pane {
   height: 100vh;
@@ -40,28 +39,16 @@
 }
 
 .intro-pane--greetings-paragraph {
-  @include headline-1();
-
   background-color: $matte;
 }
 
 .intro-pane--intro-paragraph {
-  @include headline-4();
-
   background-color: $matte;
 }
 
 @media (max-width: 991.98px) {
   .intro-pane {
     height: auto;
-  }
-
-  .intro-pane--greetings-paragraph {
-    @include headline-3();
-  }
-
-  .intro-pane--intro-paragraph {
-    @include headline-6();
   }
 
   .intro-pane--profile-picture {

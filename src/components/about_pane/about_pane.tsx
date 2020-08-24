@@ -14,21 +14,21 @@ export function AboutPane(): JSX.Element {
         <PaneLabel text='about' className='offset-md-1 offset-lg-2' />
         <div className='row'>
           <div className='col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2'>
-            <div className='about-pane--paragraph'>
+            <h6 className='about-pane--paragraph'>
               Thoughtful designs and user-empowering products have always
               energized me. And as a software engineer, I have helped to bring
               many of them to life with web technologies.
-            </div>
+            </h6>
 
-            <div className='about-pane--paragraph'>
+            <h6 className='about-pane--paragraph'>
               Beyond software development, I have a deep passion for art,
               photography, and music. In my spare time, you will often find me
               tinkering with Polaroid cameras 📸, meandering through art
               exhibitions 🖼, attending orchestra concerts 🎻, or maybe just at
               home watering my plants 🌱.
-            </div>
+            </h6>
 
-            <div className='about-pane--paragraph'>
+            <h6 className='about-pane--paragraph'>
               If you’d like to, check out my{' '}
               <a
                 href='https://linkedin.com/in/weipeng29'
@@ -57,7 +57,7 @@ export function AboutPane(): JSX.Element {
                 resume
               </a>
               .
-            </div>
+            </h6>
           </div>
         </div>
         <img src={aboutPaneBackground} className='about-pane--background' />

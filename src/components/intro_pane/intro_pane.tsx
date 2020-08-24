@@ -14,23 +14,23 @@ export function IntroPane(): JSX.Element {
       <PaneLabel text={'intro'} />
       <div className='row intro-pane--greetings'>
         <div className='col-12 col-lg-6'>
-          <div className='intro-pane--greetings-paragraph text-italic'>
+          <h1 className='intro-pane--greetings-paragraph text-italic'>
             Hey there!
-          </div>
-          <div className='intro-pane--greetings-paragraph text-italic'>
+          </h1>
+          <h1 className='intro-pane--greetings-paragraph text-italic'>
             I&apos;m Orpheus.
-          </div>
+          </h1>
         </div>
       </div>
       <div className='row intro-pane--intro'>
         <div className='col-12 col-lg-7'>
-          <div className='intro-pane--intro-paragraph'>
+          <h4 className='intro-pane--intro-paragraph'>
             I am a Software Engineer in{' '}
             <span className='text-bold'>web development</span> based in{' '}
             <span className='text-bold'>San Francisco</span>, currently pursuing
             a master&apos;s degree in{' '}
             <span className='text-bold'>software management</span>.
-          </div>
+          </h4>
         </div>
       </div>
     </React.Fragment>
