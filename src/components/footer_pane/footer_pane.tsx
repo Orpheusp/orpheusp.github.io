@@ -10,7 +10,9 @@ export function FooterPane(): JSX.Element {
     <div className='footer-pane'>
       <div className='container'>
         <div className='row'>
-          <ConnectHandlesGroup className='col-4' inline={true} />
+          <div className='col-4'>
+            <ConnectHandlesGroup inline={true} />
+          </div>
           <div className='col-2' />
           <div className='col-6 footer-pane--footnote'>
             <div className='subtitle-2'>

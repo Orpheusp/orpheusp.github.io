@@ -35,7 +35,11 @@ export function IntroPane(): JSX.Element {
       <div className='container'>
         <div className='intro-pane--content'>
           {text}
-          <ConnectHandlesGroup className='col-12' />
+          <div className='row intro-pane--connect-handles'>
+            <div className='col-12'>
+              <ConnectHandlesGroup />
+            </div>
+          </div>
         </div>
       </div>
     </div>
